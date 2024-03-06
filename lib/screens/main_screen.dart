@@ -2,6 +2,7 @@
 //  Import LIBRARIES
 import 'package:flutter/material.dart';
 //  Import FILES
+import '../widgets/side_menu_widget.dart';
 //  //   ///
 
 class MainScreen extends StatelessWidget {
@@ -12,16 +13,15 @@ class MainScreen extends StatelessWidget {
     // final isDesktop = Responsive.isDesktop(context);
 
     return Scaffold(
-      appBar: AppBar(
-        title: const Text('Main Page'),
-      ),
+      // appBar: AppBar(title: const Text('Main Page')),
       body: SafeArea(
           child: Row(
         children: <Widget>[
-          Expanded(
+          const Expanded(
             flex: 2,
-            child: Container(
-              color: Colors.red,
+            // child: Container(color: Colors.red,),
+            child: SizedBox(
+              child: SideMenuWidget(),
             ),
           ),
           Expanded(
