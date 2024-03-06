@@ -2,6 +2,7 @@
 //  Import LIBRARIES
 import 'package:flutter/material.dart';
 //  Import FILES
+import '../widgets/dashboard_widget.dart';
 import '../widgets/side_menu_widget.dart';
 //  //   ///
 
@@ -24,10 +25,11 @@ class MainScreen extends StatelessWidget {
               child: SideMenuWidget(),
             ),
           ),
-          Expanded(
+          const Expanded(
             flex: 7,
-            child: Container(
-              color: Colors.blue,
+            // child: Container(color: Colors.blue,),
+            child: SizedBox(
+              child: DashboardWidget(),
             ),
           ),
           Expanded(

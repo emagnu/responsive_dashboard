@@ -3,6 +3,7 @@
 import 'package:flutter/material.dart';
 //  Import FILES
 // import '../data/side_menu_data.dart';
+import '../const/constant.dart';
 import '../model/all_records.dart';
 //  //   //
 
@@ -22,7 +23,7 @@ class _SideMenuWidgetState extends State<SideMenuWidget> {
     final data = SideMenuRecords();
 
     return Padding(
-      padding: const EdgeInsets.only(top: 52.0, left: 5.0),
+      padding: const EdgeInsets.only(top: 52.0, left: 10.0),
       child: ListView.builder(
         // itemCount: data.menu.length,
         itemCount: data.menuR.length,
@@ -35,7 +36,7 @@ class _SideMenuWidgetState extends State<SideMenuWidget> {
               });
             },
             child: ListTile(
-              tileColor: isSelected ? Colors.grey[200] : Colors.transparent,
+              tileColor: isSelected ? Colors.grey[500] : Colors.transparent,
               // leading: Icon(data.menu[index].icon),
               // title: Text(data.menu[index].title),
               leading: Icon(
@@ -48,6 +49,9 @@ class _SideMenuWidgetState extends State<SideMenuWidget> {
                   fontWeight: FontWeight.w500,
                   color: isSelected ? Colors.black : Colors.grey,
                 ),
+              ),
+              shape: RoundedRectangleBorder(
+                borderRadius: BorderRadius.circular(10.0),
               ),
             ),
           );
